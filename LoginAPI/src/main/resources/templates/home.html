@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Welcome! </h1>
+	
+	<!-- 로그인 버튼 -->
+	<a sec:authorize="isAnonymous()" th:href="@{/login}">Login</a>
+	
+	<!-- 로그아웃 버튼 -->
+	<a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout</a>
+	
+	<a sec:authorize="isAnonymous()" th:href="@{/signUp}">SignUp</a>
+</body>
+</html>

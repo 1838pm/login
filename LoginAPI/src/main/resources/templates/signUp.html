@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>
+		<a href="/home">Home</a> / Sign Up
+	</h1>
+	
+	<form th:action="@{/signUp}" th:object="${userDto}" method="POST">
+		<div class="mb-3">
+			<label class="form-label">Email : </label>
+			<input type="text" name="email" placeholder="enter email" required autofocus>
+		</div>
+		
+		<div class="mb-3">
+			<label class="form-label">Password1 : </label>
+			<input type="password" name="password1" placeholder="enter password">
+		</div>
+		
+		<div class="mb-3">
+			<label class="form-label">Password2 : </label>
+			<input type="password" name="password2">
+		</div>
+		
+		<div class="mb-3">
+			<button type="submit" class="btn btn-primary">Sign Up</button>
+		</div>
+	</form>
+</body>
+</html>
